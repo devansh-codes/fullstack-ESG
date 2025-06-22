@@ -1,11 +1,7 @@
 <div align="center">
-  <img src="./assets/logo.png" alt="ESGalpha Logo" width="150px" />
   <h1 align="center">ESGalpha Dashboard</h1>
   <p align="center">
     A full-stack web application for modeling the impact of ESG & macroeconomic data on global markets.
-    <br />
-    <a href="#dashboard-preview"><strong>View Demo »</strong></a>
-    <br />
     <br />
   </p>
 </div>
@@ -38,22 +34,6 @@ The application fetches real-time ESG data from **Refinitiv** and comprehensive 
 
 <br>
 
-## Dashboard Preview
-
-Here is a glimpse of the main dashboard, showcasing ESG pillar scores and macroeconomic trends.
-
-<p align="center">
-  <img src="./assets/dashboard-preview.png" alt="Dashboard Preview" width="80%">
-</p>
-
-Users can drill down into specific metrics and model scenarios using interactive controls.
-
-<p align="center">
-  <img src="./assets/dashboard-detail.png" alt="Dashboard Detail View" width="80%">
-</p>
-
-<br>
-
 ## Tech Stack
 
 This project leverages a modern, full-stack architecture.
@@ -64,16 +44,6 @@ This project leverages a modern, full-stack architecture.
 | **Backend** | `Java` `Spring Boot` `Spring Web` `Maven`                                                                                                                                                                |
 | **DevOps** | `Git` `GitHub` `Docker` `Jenkins`                                                                                                                                                                        |
 | **Data Sources** | `Refinitiv ESG API` `World Bank Open Data API`                                                                                                                                                       |
-
-<br>
-
-## System Architecture
-
-The application follows a classic microservice-oriented architecture, with a clear separation between the frontend client and the backend data provider.
-
-<p align="center">
-  <img src="./assets/architecture.png" alt="System Architecture Diagram">
-</p>
 
 <br>
 
@@ -123,13 +93,29 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Devansh Chaudhary - [devansh-codes](https://github.com/devansh-codes) Project Link: [https://github.com/devansh-codes/fullstack-ESG](https://github.com/devansh-codes/fullstack-ESG) ```
 ---
 
-#### **4. Commit and Push the New Files**
+### Step 2: Remove the `assets` Folder and Push the Changes
 
-Finally, we need to add the new images and the updated README to Git and push them to GitHub.
+Now, let's delete the unused image folder and commit our final `README.md` changes. We'll do this from the terminal.
 
-1.  Open the **Commit** tool window in IntelliJ (`⌘ + K` or `Ctrl + K`).
-2.  You will see the new image files and the modified `README.md` in the "Changes" list. Check the box to select all of them.
-3.  Write a commit message, for example: `Add image assets locally and update README`
-4.  Click the **Commit and Push...** button to send the changes directly to GitHub.
+1.  **Open the Terminal** in IntelliJ (make sure you're in the `esgalpha-backend` root folder).
 
-Once the push is complete, refresh your GitHub page. The images will now load correctly because they are part of your repository itself.
+2.  **Remove the folder:**
+    * On Mac/Linux: `rm -rf assets`
+    * On Windows: `rd /s /q assets`
+
+3.  **Add all changes to Git:** (This will stage the README update and the folder deletion)
+    ```bash
+    git add .
+    ```
+
+4.  **Commit the changes:**
+    ```bash
+    git commit -m "Finalize README and remove image assets"
+    ```
+
+5.  **Push to GitHub:**
+    ```bash
+    git push origin main
+    ```
+
+Now, when you refresh your GitHub page, you will see a clean, professional, text-based README that loads instantly, and the unused `assets` folder will be gone.
